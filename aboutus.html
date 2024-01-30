@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online help</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: poppins;
+            }
+            #about-section {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 80px 12%;
+            }
+            .about-left img{
+                width: 420px;
+                height: auto;
+                transform: translateY(50px);
+            }
+            .about-right {
+                width: 54%;
+            }
+
+            .about-right ul li {
+                display: flex;
+                align-items: center;
+            }
+
+            .about-right h1 {
+                color: blue;
+                font-size: 37px;
+                margin-bottom: 5px;
+            }
+
+            .about-right p {
+                color: #444;
+                line-height: 26px;
+                font-size: 15px;
+            }
+
+            .about-right .address {
+                margin: 25px 0;
+            }
+
+            .about-right .address ul li {
+                margin-bottom: 5px;
+            }
+
+            .address .address-logo {
+                margin-right: 15px;
+                color: #e74d06;
+            }
+
+            .address .saprater {
+                margin: 0 35px;
+            }
+
+            .about-right .expertise ul {
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+           
+        </style>
+    </head>
+
+    <body>
+        <section id="about-section">
+            
+            <div class="about-left">
+                <img src="data:image/png;base64,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" alt="About Img"/>
+            </div>
+
+            
+            <div class="about-right">
+                <h4>Jayanth Bank</h4>
+                <h1>Thank you for your support and dedication</h1>
+                <p>Check balances on accounts and view records of your transactions.
+                    Pay bills automatically each month with easy-to-set-up auto payment.
+                    Transfer funds between accounts.
+                    Download or print statements for your tax or personal records.
+                    Access your account 24/7
+                    <br>
+                    With online banking, you can access your accounts and manage your finances from anywhere, at any time. Whether you're at home, at work, or on the go, you can log in to your online banking account and check your balances, transfer funds, pay bills, and more
+                    <br>
+                    For any quires contactUs with below details
+                </p>
+                <div class="address">
+                    <ul>
+                        <li>
+                            <span class="address-logo">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                            <p>Address</p>
+                            <span class="saprater">:</span>
+                            <p>Tirupati,Andhra pradhesh,India</p>
+                        </li>
+                        <li>
+                            <span class="address-logo">
+                                <i class="fas fa-phone-alt"></i>
+                            </span>
+                            <p>Phone No</p>
+                            <span class="saprater">:</span>
+                            <p>8328334891</p>
+                        </li>
+                        <li>
+                            <span class="address-logo">
+                                <i class="far fa-envelope"></i>
+                            </span>
+                            <p>Email ID</p>
+                            <span class="saprater">:</span>
+                            <p>jayanth@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </body>
+
+</html>
